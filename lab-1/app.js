@@ -1,0 +1,36 @@
+const express = require('express');
+const {format} = require('date-fns');
+
+const app = express();
+
+// API - 1
+app.get('/', (request, response) => {
+    response.send('Welcome to my Express Server!');
+})
+
+// API - 2
+app.get('/about', (request, response) => {
+    const resultAbout = {
+        studentName: 'Chavatapalli Rudra Sai Venkata Manikanta',
+        registrationNumber: '252U1R1054',
+        section: 'CSE-2A',
+        roomNumber:'223'
+    }
+    response.send(resultAbout);
+})
+
+// API - 3S
+app.get('/time', (request, response) => {
+    const date = new Date();
+    const formattedDate = format(date, 'dd-MM-yyyy hh:mm:ss a');
+    response.send(`Current Date and Time: ${formattedDate}`);
+})
+
+// Handle Unknown Routes
+app.use((request, response) => {
+    response.status(404).send('Page Not Found');
+});
+
+app.listen(3000, () => {
+    console.log("Express server is running on port number 3000");
+})
