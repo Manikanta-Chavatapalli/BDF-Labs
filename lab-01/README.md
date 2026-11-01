@@ -4,7 +4,7 @@
 
 - **Name:** Chavatapalli Rudra Sai Venkata Manikanta
 - **Registration Number:** 252U1R1054
-- **Section:** [Enter your section]
+- **Section:** CSE-2A & 223
 
 ## Live Link
 
