@@ -22,9 +22,13 @@ app.get('/about', (request, response) => {
 // API - 3S
 app.get('/time', (request, response) => {
     const date = new Date();
-    const formattedDate = format(date, 'dd-MM-yyyy hh:mm:ss a');
+
+    const formattedDate = date.toLocaleString('en-IN', {
+        timeZone: 'Asia/Kolkata'
+    });
+
     response.send(`Current Date and Time: ${formattedDate}`);
-})
+});
 
 // Handle Unknown Routes
 app.use((request, response) => {

@@ -8,9 +8,7 @@
 
 ## Live Link
 
-**Deployment URL:** Not deployed.
-
-[If deployment is not possible, mention the actual reason here and include Postman screenshots of every endpoint.]
+https://bdf-lab-01-7hbl.onrender.com
 
 ## Objective
 
